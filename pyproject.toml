@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "project1-kalenskiy-egor-m25-555"
+version = "0.1.0"
+description = ""
+authors = ["e.kalenskiy <egor.kalenskiy@gmail.com>"]
+packages = [{include = "labyrinth_game"}]
+
+[tool.poetry.dependencies]
+python = "^3.14"
+
+[tool.poetry.scripts]
+project = "labyrinth_game.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
