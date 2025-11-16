@@ -10,6 +10,9 @@ publish:
 package-install:
 	poetry run pip install dist/*.whl
 
+lint:
+	poetry run ruff check .
+
 project:
 	poetry run project
 

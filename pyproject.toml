@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "project1-kalenskiy-egor-m25-555"
 version = "0.1.0"
-description = ""
+description = "Текстовая приключенческая игра-лабиринт с загадками, предметами и случайными событиями"
 authors = ["e.kalenskiy <egor.kalenskiy@gmail.com>"]
 packages = [{include = "labyrinth_game"}]
 
@@ -14,3 +14,17 @@ project = "labyrinth_game.main:main"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = ["venv", ".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.14.5,<0.15.0)"
+]
